@@ -19,37 +19,35 @@ using namespace std;
 Используйте explicit конструктор и константные функции-члены (например, для отображения данных о книге и т.д.)
 */
 int main()  
-{  
+{  //
    // Create an array of books  
-   int size = 4;  
-   book tempbook;
-   BookArray books(size);  
+	int size = 4;  
+	book tempbook;
+	BookArray books(size);  
+	book book1("Oleksandra", "C++", "Step", 2020, 40);
+	book book2("Natasha", "Programming Basics", "Step", 2018, 300);
+	book book3("Oleksandra", "New C++", "Step", 2020, 12);
+	book book4("Lala", "Basic tech", "Step", 2010, 150);
 
-   book book1 = {"Oleksandra", "C++", "Step", 2020, 40};
-   books.AddBook(book1);
-   book1 = {"Natasha", "Programming Basics", "Step", 2018, 300 };
-   books.AddBook(book1);
-   book1 = {"Oleksandra", "New C++", "Step", 2020, 12 };
-   books.AddBook(book1);
-   book1 = {"Lala", "Basic texh", "Step", 2010, 150 };
-   books.AddBook(book1);
+	books.AddBook(book1);
+	books.AddBook(book2);
+	books.AddBook(book3);
+	books.AddBook(book4);
 
+	// Display all books  
+	books.ShowBooks();  
 
+	// Display books by a specific author  
+	cout << "\nBooks by Oleksandra:\n";  
+	books.ShowBooksByAuthor("Oleksandra");  
 
-   // Display all books  
-   books.ShowBooks();  
+	// Display books by a specific publishing house  
+	cout << "\nBooks published by 'Step':\n";  
+	books.ShowBooksByPublishingHouse("Step");  
 
-   // Display books by a specific author  
-   cout << "\nBooks by Oleksandra:\n";  
-   books.ShowBooksByAuthor("Oleksandra");  
+	// Display books published after a specific year  
+	cout << "\nBooks published after 2019:\n";  
+	books.ShowBooksAfterYear(2019);  
 
-   // Display books by a specific publishing house  
-   cout << "\nBooks published by 'Step':\n";  
-   books.ShowBooksByPublishingHouse("Step");  
-
-   // Display books published after a specific year  
-   cout << "\nBooks published after 2019:\n";  
-   books.ShowBooksAfterYear(2019);  
-
-   return 0;  
+	return 0;  
 }
