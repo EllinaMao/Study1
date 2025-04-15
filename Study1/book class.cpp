@@ -157,17 +157,17 @@ size_t book::GetSize() const
 	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	return size;
 }
-
-//book::~book()
-//{
-//	if (autor) {
-//		delete[]autor;
-//	}
-//	if (title) {
-//		delete[]title;
-//	}
-//	if (publishing_house) {
-//		delete[]publishing_house;
-//	}
 //
-//}
+book::~book()
+{
+	if (autor) {
+		delete[]autor;
+	}
+	if (title) {
+		delete[]title;
+	}
+	if (publishing_house) {
+		delete[]publishing_house;
+	}
+
+}

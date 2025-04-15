@@ -25,7 +25,7 @@ private:
 public:
 
     book();
-    //~book();
+    ~book();
 
     book(const char* au, const char* ti, const char* p_h, unsigned short yr, unsigned short np); 
 

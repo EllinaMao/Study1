@@ -19,15 +19,14 @@ using namespace std;
 Используйте explicit конструктор и константные функции-члены (например, для отображения данных о книге и т.д.)
 */
 int main()  
-{  ///
+{
    // Create an array of books  
-	int size = 0;  
 	book book1("Oleksandra", "C++", "Step", 2020, 40);
 	book book2("Natasha", "Programming Basics", "Step", 2018, 300);
 	book book3("Oleksandra", "New C++", "Step", 2020, 12);
 	book book4("Lala", "Basic tech", "Step", 2010, 150);
 
-	BookArray books;  
+	BookArray books;
 
 	books.AddBook(book1);
 	books.AddBook(book2);
