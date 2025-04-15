@@ -28,10 +28,11 @@ private:
 	size_t count;
 public:
 
-	BookArray() : books(nullptr), count(0) {}
+	BookArray() = default;
 	explicit BookArray(size_t s);
 
 	void AddBook(const book& b);
+
 
 	void ShowBooks() const;
 	void ShowBooksByAuthor(const char* author) const;

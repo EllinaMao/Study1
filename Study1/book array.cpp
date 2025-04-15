@@ -46,8 +46,9 @@ void BookArray::AddBook(const book& b)
 		books[0] = b;
 		count = 1;
 	}
+	count++;
 }
-	
+
 void BookArray::ShowBooksByAuthor(const char* author) const {
 	for (size_t i = 0; i < count; ++i) {
 		if (strcmp(books[i].GetAutor(), author) == 0) {
