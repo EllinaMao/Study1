@@ -1,12 +1,13 @@
 /*
-Задание 2
-Создайте класс Worker.
-	+Необходимо хранить данные : ФИО, Должность, Год поступления на работу, Зарплата.
-	+Создать массив объектов.Вывести :
-	+список работников, стаж работы которых на данном предприятии превосходит заданное число лет;
-	+список работников, зарплата которых превосходит заданную;
-	+список работников, занимающих заданную должность.
-	+Используйте explicit конструктор и константные функции - члены(например, для отображения данных о работнике и т.д.)
+Задание 1
+Создайте класс Book.
+	Необходимо хранить данные: Автор, Название, Издательство, Год, Количество, страниц.
+	Создать массив объектов   (створюємо клас МасивКнижок) . Вывести:
+	список книг заданного автора;
+	список книг, выпущенных заданным издательством;
+	список книг, выпущенных после заданного года.
+Используйте explicit конструктор и константные функции-члены (например, для отображения данных о книге и т.д.)
+
 */
 
 #include <iostream>
@@ -24,12 +25,21 @@ int main()
 {
 #ifdef TASK1
 
+	BookArray Library;
 
+	Library.AddThisBook("Oleksandra", "Programming Basics", "Step", 2012, 335);
+	Library.AddThisBook("Sara", "Programming Basics", "ProgrammesAssociation", 2000, 760);
+	Library.AddThisBook("Darina", "Programming Basics", "GeekBrains", 2010, 300);
+	Library.AddThisBook("Marina", "Programming Basics", "ShoesBox", 2025, 10);
+	Library.AddThisBook("Oleksandra", "Programming Python", "Step", 2018, 360);
+	Library.AddThisBook("Natasha", "Programming Basics", "SilverArray", 2019, 200);
+	Library.AddThisBook("Oleksandra", "Programming C++", "Step", 203, 150);
 
+	Library.Output();
 
-
-
-
+	Library.ShowBooksByAuthor("Oleksandra");
+	Library.ShowBooksByPublishingHouse("Step");
+	Library.ShowBooksAfterYear(2019);
 
 #endif // TASK1
 #ifdef TASK2

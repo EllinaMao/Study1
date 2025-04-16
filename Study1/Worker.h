@@ -3,8 +3,8 @@
 #define TASK2
 
 #include <iostream>
+#include "strmetods.h"
 using namespace std;
-char* copy_str(const char* str);
 
 /*
 Задание 2
@@ -32,8 +32,14 @@ public:
 
 	double GetSalary()const;
 	int GetYear()const;
-	char* GetFullName()const;
-	char* GetPosition()const;
+	const char* GetFullName()const;
+	const char* GetPosition()const;
+
+	void SetSalary(const double set_salary);
+	void SetYear(const int set_year);
+	void SetFullName(const char* set_full_name);
+	void SetPosition(const char* set_position);
+
 
 	void Output()const;
 	~Worker();

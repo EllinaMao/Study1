@@ -1,18 +1,5 @@
 #include "Worker.h"
 
-char* copy_str(const char* str)
-{
-	if (str == nullptr) {
-		return nullptr;
-	}
-	size_t size = strlen(str) + 1;
-	char* copy = new char[size];
-
-	strcpy_s(copy, size, str);
-
-	return copy;
-}
-
 Worker::Worker(double sal, int year, const char* fn, const char* pos)
 	: salary(sal), year_of_employment(year), full_name(copy_str(fn)), position(copy_str(pos)) {}
 
@@ -35,14 +22,40 @@ int Worker::GetYear() const
 	return year_of_employment;
 }
 
-char* Worker::GetFullName() const
+const char* Worker::GetFullName() const
 {
 	return full_name;
 }
-
-char* Worker::GetPosition() const
+ 
+const char* Worker::GetPosition() const
 {
 	return position;
+}
+
+void Worker::SetSalary(const double set_salary)
+{
+	salary = set_salary;
+}
+
+void Worker::SetYear(const int set_year)
+{
+	year_of_employment = set_year;
+}
+
+void Worker::SetFullName(const char* set_full_name)
+{
+	if (full_name) {
+		delete[] full_name;
+	}
+	full_name = copy_str(set_full_name);
+}
+
+void Worker::SetPosition(const char* set_position)
+{
+	if (position) {
+		delete[] position;
+	}
+	position = copy_str(set_position);
 }
 
 

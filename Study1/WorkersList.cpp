@@ -1,16 +1,15 @@
 #include "WorkersList.h"
-#include <chrono>
-#include <ctime>
+
 
 void WorkersList::AddThisWorker(double salary, int year, const char* full_name, const char* position)
 {
     Worker* new_worker = new Worker(salary, year, full_name, position);
 
-    int new_count = worker_count + 1;
+    size_t new_count = worker_count + 1;
 
     Worker** temp = new Worker*[new_count];
 
-    for (int i = 0; i < worker_count; i++) {
+    for (size_t i = 0; i < worker_count; i++) {
         temp[i] = workers[i];
     }
 
@@ -82,21 +81,4 @@ WorkersList::~WorkersList()
     delete[] workers;
     workers = nullptr;
     worker_count = 0;
-}
-
-int ThisYear()
-{
-    // Get the current time
-    auto now = chrono::system_clock::now();
-
-    // Convert to time_t to extract calendar time
-    time_t current_time = chrono::system_clock::to_time_t(now);
-
-    // Convert to tm structure for extracting year
-    std::tm local_time;
-    localtime_s(&local_time, &current_time);
-
-    // Get the current year
-    int current_year = 1900 + local_time.tm_year;
-    return current_year;
 }

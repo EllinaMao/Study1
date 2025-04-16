@@ -18,12 +18,42 @@
     <ClCompile Include="classwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="book array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="book class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Worker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkersList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strmetods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timefunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="book class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="book array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkersList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strmetods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timefunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

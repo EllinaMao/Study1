@@ -1,5 +1,6 @@
 #pragma once
 #include "Worker.h"
+#include "timefunctions.h"
 /*
 	Создать массив объектов.Вывести :
 	список работников, стаж работы которых на данном предприятии превосходит заданное число лет;
@@ -9,8 +10,9 @@
 */
 class WorkersList {
 private:
-	size_t worker_count = 0;
+
 	Worker** workers = nullptr;
+	size_t worker_count = 0;
 
 public:
 
@@ -24,4 +26,3 @@ public:
 	~WorkersList();
 };
 
-int ThisYear();

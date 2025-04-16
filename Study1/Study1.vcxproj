@@ -130,12 +130,16 @@
     <ClCompile Include="book array.cpp" />
     <ClCompile Include="book class.cpp" />
     <ClCompile Include="classwork.cpp" />
+    <ClCompile Include="strmetods.cpp" />
+    <ClCompile Include="timefunctions.cpp" />
     <ClCompile Include="Worker.cpp" />
     <ClCompile Include="WorkersList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="book array.h" />
     <ClInclude Include="book class.h" />
+    <ClInclude Include="strmetods.h" />
+    <ClInclude Include="timefunctions.h" />
     <ClInclude Include="Worker.h" />
     <ClInclude Include="WorkersList.h" />
   </ItemGroup>
