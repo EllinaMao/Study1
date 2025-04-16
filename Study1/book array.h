@@ -7,34 +7,20 @@
 список книг, выпущенных после заданного года.
 Используйте explicit конструктор и константные функции-члены (например, для отображения данных о книге и т.д.)
 */
-#include "book class.h"
 #include <iostream>
+#include "book class.h"
 using namespace std;
-
-
-/*
-	unsigned short year;
-	unsigned short number_of_pages;
-
-	char* autor = nullptr;
-	char* title = nullptr;//book name
-	char* publishing_house = nullptr;
-*/
 
 
 class BookArray {
 private:
-	book* books;
-	size_t count;
+	book** books = nullptr;
+	size_t books_count = 0;
 public:
 
-	BookArray() = default;
-	explicit BookArray(size_t s);
+	void AddThisBook(const char* au, const char* ti, const char* p_h, unsigned short yr, unsigned short np);
+	void Output() const;
 
-	void AddBook(const book& b);
-
-
-	void ShowBooks() const;
 	void ShowBooksByAuthor(const char* author) const;
 	void ShowBooksByPublishingHouse(const char* publishing_house) const;
 	void ShowBooksAfterYear(unsigned short year) const;

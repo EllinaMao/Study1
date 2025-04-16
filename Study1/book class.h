@@ -1,4 +1,11 @@
 #pragma once
+#ifndef TASK1
+#define TASK1
+
+#include <iostream>
+#include "strmetods.h"
+using namespace std;
+
 /*
 Задание 1
 Создайте класс Book.
@@ -7,34 +14,30 @@
 
 */
 
-#include <iostream>
-using namespace std;
-
 class book {
 private:
     unsigned short year;
     unsigned short number_of_pages;
 
-    char* autor = nullptr;
-    char* title = nullptr; // book name
-    char* publishing_house = nullptr;
-    void InputStr(char*& temp) const;
-    size_t GetSize() const;
-
+    char* autor;
+    char* title; // book name
+    char* publishing_house;
 
 public:
 
     book();
-    ~book();
-
     book(const char* au, const char* ti, const char* p_h, unsigned short yr, unsigned short np); 
+    book(const book& b);
 
-    void InputBook();
-    void InputAutor();
-    //void InputTitle();
-    //void InputPublicHouse();
-    //void InputYear();
-    //void InputNumberPages();
+    void Output() const;
+    const char* GetAutor() const;
+    const char* GetPublishingHouse() const;
+    const char* GetTitle() const;
+    unsigned short GetYear() const;
+    unsigned short GetNumberOfPages() const;
+
+
+
 
     void SetAutor(const char* au);
     void SetTitle(const char* ti);
@@ -42,11 +45,7 @@ public:
     void SetYear(unsigned short yr);
     void SetNumberOfPages(unsigned short np);
 
-    void show() const;
-    const char* GetAutor() const;
-    const char* GetPublishingHouse() const;
-    const char* GetTitle() const;
-
-    unsigned short GetYear() const;
-    unsigned short GetNumberOfPages() const;
+    ~book();
 };
+
+#endif // !TASK1
