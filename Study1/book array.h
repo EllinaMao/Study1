@@ -30,9 +30,9 @@ public:
 
 	BookArray() = default;
 	explicit BookArray(size_t s);
+	explicit BookArray(const book& b);
 
 	void AddBook(const book& b);
-
 
 	void ShowBooks() const;
 	void ShowBooksByAuthor(const char* author) const;

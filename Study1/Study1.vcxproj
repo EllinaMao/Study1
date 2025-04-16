@@ -127,8 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="book array.cpp" />
-    <ClCompile Include="book class.cpp" />
     <ClCompile Include="classwork.cpp" />
   </ItemGroup>
   <ItemGroup>

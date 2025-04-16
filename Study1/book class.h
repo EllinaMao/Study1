@@ -29,8 +29,8 @@ public:
 
     book(const char* au, const char* ti, const char* p_h, unsigned short yr, unsigned short np); 
 
-    void InputBook();
-    void InputAutor();
+    //void InputBook();
+    //void InputAutor();
     //void InputTitle();
     //void InputPublicHouse();
     //void InputYear();
