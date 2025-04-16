@@ -28,7 +28,7 @@ private:
 	size_t count;
 public:
 
-	BookArray() = default;
+	BookArray();
 	explicit BookArray(size_t s);
 	explicit BookArray(const book& b);
 

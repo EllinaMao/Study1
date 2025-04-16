@@ -1,52 +1,54 @@
-// classwork.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+Задание 2
+Создайте класс Worker.
+	+Необходимо хранить данные : ФИО, Должность, Год поступления на работу, Зарплата.
+	+Создать массив объектов.Вывести :
+	+список работников, стаж работы которых на данном предприятии превосходит заданное число лет;
+	+список работников, зарплата которых превосходит заданную;
+	+список работников, занимающих заданную должность.
+	+Используйте explicit конструктор и константные функции - члены(например, для отображения данных о работнике и т.д.)
+*/
 
 #include <iostream>
+//def task1
 #include "book class.h"
 #include "book array.h"
+
+//def task2
+#include "Worker.h"
+#include "WorkersList.h"
+
 using namespace std;
-/*
-Задание 1
-Создайте класс Book.
 
-Необходимо хранить данные: Автор, Название, Издательство, Год, Количество, страниц.
-
-Создать массив объектов. Вывести:
-
-список книг заданного автора;
-список книг, выпущенных заданным издательством;
-список книг, выпущенных после заданного года.
-Используйте explicit конструктор и константные функции-члены (например, для отображения данных о книге и т.д.)
- //  // Create an array of books  
-	//book book1("Oleksandra", "C++", "Step", 2020, 40);
-	//book book2("Natasha", "Programming Basics", "Step", 2018, 300);
-	//book book3("Oleksandra", "New C++", "Step", 2020, 12);
-	//book book4("Lala", "Basic tech", "Step", 2010, 150);
-
-	//BookArray books;
-
-	//books.AddBook(book1);
-	//books.AddBook(book2);
-	//books.AddBook(book3);
-	//books.AddBook(book4);
-
-	//// Display all books  
-	//books.ShowBooks();  
-
-	////// Display books by a specific author  
-	////cout << "\nBooks by Oleksandra:\n";  
-	////books.ShowBooksByAuthor("Oleksandra");  
-
-	////// Display books by a specific publishing house  
-	////cout << "\nBooks published by 'Step':\n";  
-	////books.ShowBooksByPublishingHouse("Step");  
-
-	////// Display books published after a specific year  
-	////cout << "\nBooks published after 2019:\n";  
-	////books.ShowBooksAfterYear(2019);  
-
-*/
-int main()  
+int main()
 {
-	return 0;  
+#ifdef TASK1
+
+
+
+
+
+
+
+
+#endif // TASK1
+#ifdef TASK2
+	WorkersList Step;
+
+	Step.AddThisWorker(5000.21, 1999, "Natasa Darova", "Director");
+	Step.AddThisWorker(3000.11, 1999, "Sara Darova", "Manager");
+	Step.AddThisWorker(140.1, 2012, "Anton Gavrilov", "Worker");
+	Step.AddThisWorker(140.1, 2019, "Serafina Ligova", "Worker");
+	Step.AddThisWorker(140.1, 2017, "Daria Machina", "Worker");
+	Step.AddThisWorker(140.1, 2014, "Shizoid Parfentivich", "Worker");
+	Step.AddThisWorker(140.7, 2025, "Glucka Andreevna", "Worker");
+
+	Step.Output();
+
+	Step.OutputWorkersWorkedAbove(12);
+	Step.OutputWorkersWithSalaryAbove(3000);
+	Step.OutputWorkersByPosition("Worker");
+#endif // TASK2
+
+	return 0;
 }
